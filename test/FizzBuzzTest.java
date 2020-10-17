@@ -35,4 +35,13 @@ class FizzBuzzTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("2 to Hai")
+    void test2toHai() {
+        int number = 2;
+        String expected = "Hai";
+        String actual = FizzBuzz.translate(number);
+        assertEquals(expected, actual);
+    }
+
 }

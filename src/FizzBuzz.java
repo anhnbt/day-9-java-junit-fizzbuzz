@@ -7,13 +7,16 @@
 public class FizzBuzz {
     public FizzBuzz() {}
     public static String translate(int number) {
+        if (isFizz(number) && isBuzz(number)) {
+            return "FizzBuzz";
+        }
         if (isFizz(number)) {
             return "Fizz";
         }
         if (isBuzz(number)) {
             return "Buzz";
         }
-        return String.valueOf(number);
+        return "Hai";
     }
 
     private static boolean isFizz(int number) {
