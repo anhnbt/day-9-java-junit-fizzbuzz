@@ -7,12 +7,20 @@
 public class FizzBuzz {
     public FizzBuzz() {}
     public static String translate(int number) {
-        if (number % 5 == 0) {
-            return "Buzz";
-        } else if (number % 3 == 0) {
+        if (isFizz(number)) {
             return "Fizz";
+        } else if (isBuzz(number)) {
+            return "Buzz";
         } else {
             return String.valueOf(number);
         }
+    }
+
+    private static boolean isFizz(int number) {
+        return number % 3 == 0;
+    }
+
+    private static boolean isBuzz(int number) {
+        return number % 5 == 0;
     }
 }
