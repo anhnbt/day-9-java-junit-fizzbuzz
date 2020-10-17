@@ -6,5 +6,7 @@
  */
 public class FizzBuzz {
     public FizzBuzz() {}
-
+    public static String translate(int number) {
+        return (number % 3 == 0) ? "Fizz" : String.valueOf(number);
+    }
 }

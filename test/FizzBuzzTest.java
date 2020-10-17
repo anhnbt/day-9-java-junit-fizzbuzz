@@ -14,9 +14,8 @@ class FizzBuzzTest {
     @Test
     @DisplayName("3 to Fizz")
     void testFizz() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String expected = "fizz";
-        String actual = fizzBuzz.translate(3);
+        String expected = "Fizz";
+        String actual = FizzBuzz.translate(3);
         assertEquals(expected, actual);
     }
 
