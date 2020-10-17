@@ -16,7 +16,76 @@ public class FizzBuzz {
         if (isBuzz(number)) {
             return "Buzz";
         }
-        return "Hai";
+        return numberToWorld(number);
+    }
+
+    private static String numberToWorld(int number) {
+        String numberToWorld = "";
+        int unit = number % 10;
+        int tens = (number % 100) / 10;
+        if (number > 10) {
+            switch (tens) {
+                case 1:
+                    numberToWorld += "Muoi ";
+                    break;
+                case 2:
+                    numberToWorld += "Hai ";
+                    break;
+                case 3:
+                    numberToWorld += "Ba ";
+                    break;
+                case 4:
+                    numberToWorld += "Bon ";
+                    break;
+                case 5:
+                    numberToWorld += "Nam ";
+                    break;
+                case 6:
+                    numberToWorld += "Sau ";
+                    break;
+                case 7:
+                    numberToWorld += "Bay ";
+                    break;
+                case 8:
+                    numberToWorld += "Tam ";
+                    break;
+                case 9:
+                    numberToWorld += "Chin ";
+                    break;
+                default:
+                    numberToWorld = String.valueOf(number);
+            }
+        }
+        switch (unit) {
+            case 1:
+                numberToWorld += "Mot";
+                break;
+            case 2:
+                numberToWorld += "Hai";
+                break;
+            case 3:
+                numberToWorld += "Ba";
+                break;
+            case 4:
+                numberToWorld += "Bon";
+                break;
+            case 5:
+                numberToWorld += "Nam";
+                break;
+            case 6:
+                numberToWorld += "Sau";
+                break;
+            case 7:
+                numberToWorld += "Bay";
+                break;
+            case 8:
+                numberToWorld += "Tam";
+                break;
+            case 9:
+                numberToWorld += "Chin";
+                break;
+        }
+        return numberToWorld;
     }
 
     private static boolean isFizz(int number) {
