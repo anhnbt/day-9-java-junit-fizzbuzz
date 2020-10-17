@@ -9,11 +9,11 @@ public class FizzBuzz {
     public static String translate(int number) {
         if (isFizz(number)) {
             return "Fizz";
-        } else if (isBuzz(number)) {
-            return "Buzz";
-        } else {
-            return String.valueOf(number);
         }
+        if (isBuzz(number)) {
+            return "Buzz";
+        }
+        return String.valueOf(number);
     }
 
     private static boolean isFizz(int number) {

@@ -27,4 +27,12 @@ class FizzBuzzTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("15 to FizzBuzz")
+    void testFizzBuzz() {
+        String expected = "FizzBuzz";
+        String actual = FizzBuzz.translate(15);
+        assertEquals(expected, actual);
+    }
+
 }
