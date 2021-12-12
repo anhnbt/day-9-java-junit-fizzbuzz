@@ -1,3 +1,5 @@
+package vn.codegym;
+
 /**
  * Created by IntelliJ IDEA.
  * User: AnhNBT (anhnbt.it@gmail.com)
@@ -5,7 +7,10 @@
  * Time: 2:59 PM
  */
 public class FizzBuzz {
-    public FizzBuzz() {}
+    private FizzBuzz() {
+        throw new IllegalStateException("FizzBuzz class");
+    }
+
     public static String translate(int number) {
         if (isFizz(number) && isBuzz(number)) {
             return "FizzBuzz";
@@ -84,6 +89,8 @@ public class FizzBuzz {
             case 9:
                 numberToWorld += "Chin";
                 break;
+            default:
+                numberToWorld = String.valueOf(number);
         }
         return numberToWorld;
     }
