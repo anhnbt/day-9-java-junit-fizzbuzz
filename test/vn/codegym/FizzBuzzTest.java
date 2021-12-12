@@ -1,5 +1,9 @@
+package vn.codegym;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -11,11 +15,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class FizzBuzzTest {
 
-    @Test
-    @DisplayName("3 to Fizz")
-    void testFizz() {
+    @ParameterizedTest(name = "3 to Fizz")
+    @ValueSource(ints = {3})
+    void testFizz(int argument) {
         String expected = "Fizz";
-        String actual = FizzBuzz.translate(3);
+        String actual = FizzBuzz.translate(argument);
         assertEquals(expected, actual);
     }
 
